@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel=StyleSheet href="../../style.css" type="text/css">
+    <title>Charlie Reis | Technical Reports</title>
+  </head>
+  <body>
+    <div class="header">Technical Reports</div>
+    <div class="navigation">
+      <ul>
+        <li><a href="../../">Charlie Reis</a>
+        <li><a href="../">Research</a>
+        <li><a href="../publications/">Publications</a>
+        <li><a href="./">Reports</a>
+        <li><a href="../talks/">Talks</a>
+      </ul>
+    </div>
+
+  <div class="content">
+    <div class="sectionTitle">At Google:</div>
+    <div class="section">
+
+      <a name="security-chromium-2008"></a>
+      <div class="paper">
+        <div class="paperTitle">Security Architecture of the Chromium Browser</div>
+        [<a href="http://crypto.stanford.edu/websec/chromium/">link to pdf</a>]<br>
+        Adam Barth, Collin Jackson, Charles Reis, and The Google Chrome Team<br>
+        Stanford Technical Report, September 2008.
+        <br>Abstract:<br>
+        <div class="abstract" id="security-chromium-2008-abstract">
+Most current web browsers employ a monolithic architecture that combines "the user" and "the web" into a single protection domain. An attacker who exploits an arbitrary code execution vulnerability in such a browser can steal sensitive files or install malware. In this paper, we present the security architecture of Chromium, the open-source browser upon which Google Chrome is built. Chromium has two modules in separate protection domains: a browser kernel, which interacts with the operating system, and a rendering engine, which runs with restricted privileges in a sandbox. This architecture helps mitigate high-severity attacks without sacrificing compatibility with existing web sites. We define a threat model for browser exploits and evaluate how the architecture would have mitigated past vulnerabilities.
+        </div>
+      </div>
+
+    </div>
+    <div class="sectionTitle">At University of Washington:</div>
+    <div class="section">
+      
+      <a name="dissertation-2009"></a>
+      <div class="paper">
+        <div class="paperTitle">Web Browsers as Operating Systems: Supporting Robust and Secure Web Programs</div>
+        [<a href="publications/creis-thesis.pdf">pdf</a>]<br>
+        Charles Reis, Ph.D. Dissertation, June 2009.<br>
+        Presentation:
+        [<a href="talks/creis-defense-may2009.pdf">pdf</a>]
+        [<a href="talks/creis-defense-may2009.mov">mov</a>]
+        [<a href="talks/creis-defense-may2009.key.zip">key</a>]<br>
+        Abstract:<br>
+        <div class="abstract" id="dissertation-2009-abstract">
+<p>
+The World Wide Web has changed significantly since its introduction, facing a shift in its workload from passive web pages to active programs.  Current web browsers were not designed for this demanding workload, and web content formats were not designed to express programs.  As a result, the platform faces numerous robustness and security problems, ranging from interference between programs to script injection attacks to browser exploits.
+</p>
+<p>
+This dissertation presents a set of contributions that adapt lessons from operating systems to make the web a more suitable platform for deploying and running programs.  These efforts are based upon four architectural principles for supporting programs.  First, we must recognize web programs and precisely identify the boundaries between them, while preserving compatibility with existing content.  Second, we must improve browser architectures to effectively isolate web programs from each other at runtime.  Third, publishers must have the ability to authorize the code that runs within the programs they deploy.  Fourth, users must be able to enforce policies on the programs they run within their browser.
+</p>
+<p>
+In this work, I incorporate these architectural principles into web browsers and web content, and I use experiments to quantify the improvements to robustness and performance while preserving backward compatibility.  Additionally, some of these efforts have been incorporated into the Google Chrome web browser, demonstrating their practicality.
+</p>
+        </div>
+      </div>
+
+      <a name="browser-processes-2007"></a>
+      <div class="paper">
+        <div class="paperTitle">Using Processes to Improve the Reliability of Browser-based Applications</div>
+        [<a href="publications/UW-CSE-07-12-01.pdf">pdf</a>]<br>
+        Charles Reis, Brian Bershad, Steven D. Gribble, Henry M. Levy<br>
+        Technical Report UW-CSE-2007-12-01, University of Washington, December 2007.
+        <br>Abstract:<br>
+        <div class="abstract" id="browser-processes-2007-abstract">
+Web content now includes programs that are executed directly within a web browser.  Executable content, though, creates new reliability problems for users who rely on the browser to provide program services typical of operating systems.  In particular, we find that the runtime environments of current browsers poorly isolate applications from one another.  As a result, one web application executing within the browser can interfere with others, whether it be through an explicit failure or the excessive consumption of resources.  Our goal is to make the browser a safe environment for running programs by introducing an isolation mechanism that insulates one application from the behavior of another.  We show how to use OS processes within the browser to safely isolate programs in a way that is both efficient and backwards compatible with existing web sites.
+        </div>
+      </div>
+
+      <a name="generals-2007"></a>
+      <div class="paper">
+        <div class="paperTitle">Improving the Security and Robustness of Modern Web Browsers</div>
+        [<a href="publications/generals-report.pdf">pdf</a>]<br>
+        Charles Reis<br>
+        General Exam Report, University of Washington, May 2007.<br>
+        Presentation:
+        [<a href="publications/generals-talk.pdf">pdf</a>]
+        [<a href="publications/generals-talk.mov">mov</a>]
+        [<a href="publications/generals-talk.key.zip">key</a>]
+        <br>Abstract:<br>
+        <div class="abstract" id="generals-2007-abstract">
+Despite their popularity, modern web browsers do not offer a secure or 
+robust environment for interacting with untrusted content.  Today's web
+users face a variety of threats, including exploits of browser
+vulnerabilities, interference between web sites, script injection
+attacks, and abuse of authentication credentials.  To address these
+threats, I leverage an analogy between operating systems and web
+browsers, as both must run independent programs from multiple sources.
+My hypothesis is that mechanisms from OS research can improve the
+security and robustness of modern web browsers.  In this report, I
+propose abstractions and mechanisms to isolate independent web content
+within the browser, and I propose two separate interposition techniques
+to support flexible security policies.  Combined, these contributions
+can improve the safety of web browsers, while preserving backwards
+compatibility and imposing low overhead.
+        </div>
+      </div>
+          
+      <a name="quals-2005"></a>
+      <div class="paper">
+        <div class="paperTitle">An Empirical Characterization of Wireless Network Behavior</div>
+        [<a href="publications/quals-paper.pdf">pdf</a>]<br>
+        Charles Reis<br>
+        Quals Paper, University of Washington, June 2005.<br>
+        Presentation:
+        [<a href="publications/quals-talk.pdf">pdf</a>]
+        <br>Abstract:<br>
+        <div class="abstract" id="quals-2005-abstract">
+Existing work on understanding 802.11 wireless network behavior has been largely unsatisfactory for practical settings.  Widely used simulators rely on unrealistic assumptions about signal propagation, while more detailed radio models are too complex to configure for predicting performance of an actual wireless system.  To gain a more accurate understanding of wireless behavior in practice, we use experimentation on a wireless testbed and in controlled settings to effectively characterize packet delivery.  We contribute a simple measurement-based model of wireless behavior, supported by empirical observations of relevant physical effects.  Our model and observations can be used directly for designing and improving wireless protocols and systems in practice.
+        </div>
+      </div>
+
+    </div>
+    <div class="sectionTitle">At Rice University:</div>
+    <div class="section">
+      
+      <a name="masters-2003"></a>
+      <div class="paper">
+        <div class="paperTitle">A Pedagogic Programming Environment for Java
+             that Scales to Production Programming</div>
+        [<a href="publications/creis-thesis.pdf">pdf</a>]<br>
+        Charles Reis.<br>
+        Masters Thesis, Rice University, 2003.<br>
+        Defense:
+        [<a href="publications/defense.ppt">ppt</a>]
+        [<a href="publications/defense.pdf">pdf</a>]
+      </div>
+
+  </div>
+  
+  </body>
+</html>
