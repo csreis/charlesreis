@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel=StyleSheet href="../style.css" type="text/css">
+    <title>Charlie Reis | Research Overview</title>
+  </head>
+  <body>
+    <div class="header">Research Overview</div>
+    <div class="navigation">
+      <ul>
+        <li><a href="../">Charlie Reis</a>
+        <li><a href="./">Research</a>
+        <li><a href="publications/">Publications</a>
+        <li><a href="reports/">Reports</a>
+        <li><a href="talks/">Talks</a>
+      </ul>
+    </div>
+
+  <div class="content">
+    <div class="sectionTitle">PhD Dissertation</div>
+    <div class="section">
+      <a href="reports/#dissertation-2009">Web Browsers as Operating Systems: Supporting Robust and Secure Web Programs</a>
+<p>
+Modern web browsers have evolved from simple document renderers to complex runtime environments for many types of web content. This makes them analogous to operating systems in many ways. My current research takes advantage of this analogy, using ideas from operating systems to improve the security and robustness of web browsers.
+</p>
+<p>
+I am studying how to address several current threats on the web, including browser vulnerabilities, cross-site scripting, cross-site request forgeries, and resource contention between web sites. I have proposed a set of architectural principles to better support running web programs within the browser:
+</p>
+<ul>
+  <li>Web programs and program instances must have <b>clear boundaries</b> on the network and within the web browser.
+  <li>It must be easy to specify <b>which code is authorized to run</b> in a web program, and to impose limitations on this code.
+  <li>Instances of programs must be <b>isolated in the browser</b>, to prevent interference between them.
+  <li>The behavior of program instances must be governed by <b>uniform browser-level policies</b>, independent of content types and browser extensions.
+</ul>
+    </div>
+
+    <div class="sectionTitle">Publications Overview</div>
+    <div class="section">
+    <ul>
+
+      <li><div class="paper">
+        <a href="publications/#usenix-security-2019">Site Isolation: Process Separation for Web Sites within the Browser</a><br>
+        USENIX Security, 2019.<br>
+        This paper describes the challenges we overcame to launch Site Isolation in Chrome, to help defend web sites against Spectre attacks and compromised renderer processes.  This work included performance and compatibility challenges to make it practical, as well as over 400,000 lines of code to update Chrome's architecture and feature set.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#ccs-2011">App Isolation: Get the Security of Multiple Browsers with Just One</a><br>
+        CCS, 2011.<br>
+        This paper crystallizes the security benefits of using separate browsers for different sites, and it shows how to achieve those benefits on an opt-in basis in a single web browser.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#acm-2009">Browser Security: Lessons from Google Chrome</a><br>
+        ACM Queue, 2009.<br>
+        This article describes how the Google Chrome team addressed security for web browsers in several ways, including limiting the severity of vulnerabilities, the window of vulnerability, and the frequency with which users are exposed to dangerous content.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#eurosys-2009">Isolating Web Programs in Modern Browser Architectures</a><br>
+        Eurosys, 2009.<br>
+        This paper introduces abstractions that allow web browsers to identify and isolate "web programs" from each other, without breaking existing content. The browser can then put each web program instance in its own OS process to prevent interference between them. We have helped add support for our abstractions to Google Chrome, and we evaluate how its multi-process architecture improves robustness and performance.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#nsdi-2008">Detecting In-Flight Page Changes with Web Tripwires</a><br>
+        NSDI, 2008.<br>
+        This measurement study shows that many users receive web pages that have been altered between the server and the browser, often with unwanted or dangerous consequences. The paper also shows how these changes can be detected with simple JavaScript code. <!--We have a <a href="http://www.cs.washington.edu/research/security/webtripwires.html">summary report</a> available online, which also contains links to our web tripwire toolkit and service. Our work is referenced on the recently announced <a href="http://www.measurementlab.net/resources">Measurement Lab</a>.-->
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#hotnets-2007">Architectural Principles for Safe Web Programs</a><br>
+        HotNets, 2007.<br>
+        This paper argues that current web security threats are symptoms of four fundamental problems in the ways web programs are defined and web browsers are built. It proposes architectural principles for addressing these problems.
+      </div>
+
+      <div class="paper">
+        <li><div class="paper">
+        <a href="publications/#acm-2007">BrowserShield: Vulnerability-Driven Filtering of Dynamic HTML</a><br>
+        ACM Transactions on the Web, 2007.<br>
+        This journal paper extends our OSDI paper on BrowserShield, providing more detail on the framework's policies and applications.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#osdi-2006">BrowserShield: Vulnerability-Driven Filtering of Dynamic HTML</a><br>
+        OSDI, 2006.<br>
+        This paper describes how JavaScript rewriting can be used to enforce policies on the behavior of web pages, such as preventing exploits of known browser vulnerabilities. BrowserShield has since influenced the development of Web Sandbox at Microsoft Live Labs.
+      </div>
+    </ul>
+    </div>
+
+    <div class="sectionTitle">Reports Overview</div>
+    <div class="section">
+    <ul>
+
+      <li><div class="paper">
+        <a href="publications/#">The Security Architecture of the Chromium Browser</a><br>
+        September, 2008.<br>
+        This tech report describes how the Chromium web browser (from which Google Chrome is built) uses a sandbox to try to limit the damage that can be done if a vulnerability in Chromium's rendering engine is exploited. Joint work with Adam Barth and Collin Jackson.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#">Using Processes to Improve the Reliability of Browser-based Applications</a><br>
+        December, 2007.<br>
+        This tech report shows how an increase in the use of client-side JavaScript code led to reliability problems in web browsers, and it evaluates the use of OS processes to isolate web sites from each other within the browser.
+      </div>
+
+      <li><div class="paper">
+        <a href="publications/#">Improving the Security and Robustness of Modern Web Browsers</a><br>
+        General Exam Report, 2007.<br>
+        This report is an informal thesis proposal. It describes how the current threats to web browser security can be addressed by improving the isolation between unrelated web pages and interposing on web page behavior.
+      </div>
+
+    </ul>
+    </div>
+
+  </div>
+  
+  </body>
+</html>
