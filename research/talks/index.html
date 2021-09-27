@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel=StyleSheet href="../../style.css" type="text/css">
+    <title>Charlie Reis | Talks</title>
+  </head>
+  <body>
+    <div class="header">Talks</div>
+    <div class="navigation">
+      <ul>
+        <li><a href="../../">Charlie Reis</a>
+        <li><a href="../">Research</a>
+        <li><a href="../publications/">Publications</a>
+        <li><a href="../reports/">Reports</a>
+        <li><a href="./">Talks</a>
+      </ul>
+    </div>
+
+  <div class="content">
+    <div class="sectionTitle"></div>
+    <div class="section">
+
+      <a name="dagstuhl-2009"></a>
+      <div class="paper">
+        <div class="paperTitle">Supporting and Securing Programs inside Web Browsers</div>
+        Abstract:<br>
+        <div class="abstract">
+Today's browsers are being placed in the role of operating systems for complex programs from the web. Recent versions of browsers are starting to reflect this new workload, providing better performance and greater robustness to failures. Improving security is an important challenge as well, given the valuable private data that now lives on the web. In this talk, I will discuss how new browser architectures can help protect the user's local computer with sandboxed rendering engines, as in Google Chrome. I will also describe challenges for architecturally isolating a user's web accounts from each other, and ideas about how we might achieve it.
+        </div>
+        Slides: 
+        [<a href="research/talks/dagstuhl-talk-mar2009.pdf">pdf</a>]
+        [<a href="research/talks/dagstuhl-talk-mar2009.mov">mov</a>]
+        [<a href="research/talks/dagstuhl-talk-mar2009.key.zip">key</a>]
+        <ul>
+          <li class="bullet"><a 
+            href="http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=09141">Dagstuhl Seminar on Web Application Security</a>.  
+            March 31, 2009.
+        </ul>
+      </div>
+
+      <div class="paper">
+        <div class="paperTitle">Building a Safer Web</div>
+        Abstract:<br>
+        <div class="abstract">
+Web content has shifted from simple documents to active programs, but web browsers and protocols have not evolved adequately to support them.  As a result, safety problems in web browsers and web sites now regularly make headlines, from browser exploits to ISPs that modify web pages.  In this talk, I will discuss my research in improving the safety and reliability of web browsers and web content.
+<p>
+I will focus on two recent projects: multi-process browser architectures and web tripwires.  First, I will show how current web browser architectures allow disruptive interference between web-based applications.  I have identified backwards compatible abstractions that can be used in the browser's architecture to isolate such programs in a robust way, and I have helped incorporate these abstractions into the Google Chrome browser.  I will present an evaluation of how this architecture improves the browser's robustness against interference.
+<p>
+Second, I will present a web tripwire mechanism for detecting in-flight changes to web content.  We have used web tripwires to show that many clients receive pages that have been altered before reaching the browser, with consequences ranging from injected advertisements to new security vulnerabilities.  Many sites are unwilling to bear the costs of switching to SSL for integrity, so I will show how web publishers can use web tripwires to detect such changes to their own content.
+<p>
+I will conclude with an overview of my other research, including the BrowserShield interposition system, as well as future directions for improving the safety of programs on the web.
+        </div>
+        Slides: 
+        [<a href="talks/msr-talk-mar2009.pdf">pdf</a>]
+        [<a href="talks/msr-talk-mar2009.mov">mov</a>]
+        [<a href="talks/msr-talk-mar2009.key.zip">key</a>]
+        <ul>
+          <li class="bullet"><a 
+            href="http://research.microsoft.com">Microsoft Research</a>.  
+            March 12, 2009.
+            <br>[<a href="http://www.researchchannel.org/prog/displayevent.aspx?rID=29194&fID=569">Windows Media video</a>]
+
+        </ul>
+      </div>
+
+
+      <div class="paper">
+        <div class="paperTitle">The Security Architecture of the Chromium Browser</div>
+        <i>Joint work with:</i>
+          <a href="http://www.adambarth.com/">Adam Barth</a>,
+          <a href="http://www.collinjackson.com/">Collin Jackson</a>,
+          and the <a href="http://www.google.com/chrome/">Google Chrome Team</a><br>
+        Abstract:<br>
+        <div class="abstract">
+Web browsers must often handle untrusted or malicious code while
+protecting the user.  However, most current browsers have a monolithic
+architecture that combines "the user" and "the web" into a single
+protection domain.  In these browsers, an attacker who exploits an
+arbitrary code execution vulnerability can install malware or steal
+sensitive files from the user's computer.
+<p>
+In this talk, I will discuss how the architecture used by the Chromium
+browser (from which Google Chrome is built) can help mitigate these
+high-severity attacks.  Chromium has two modules in separate protection
+domains: a browser kernel, which interacts with the operating system,
+and a rendering engine, which runs with restricted privileges in a
+sandbox.  I will show what types of attacks this architecture can help
+mitigate as well as what challenges it faces for addressing other threats.
+        </div>
+        Slides: 
+        [<a href="talks/stanford-seminar-dec2008.pdf">pdf</a>]
+        [<a href="talks/stanford-seminar-dec2008.mov">mov</a>]
+        [<a href="talks/stanford-seminar-dec2008.key.zip">key</a>]
+        <ul>
+          <li class="bullet"><a 
+            href="http://crypto.stanford.edu/seclab/sem-08-09/charlesreis.html">Stanford Security Seminar</a>.  
+            December 2, 2008.
+        </ul>
+      </div>
+
+
+      <div class="paper">
+        <div class="paperTitle">Building a Safer Web: Web Tripwires and a New Browser Architecture</div>
+        Abstract:<br>
+        <div class="abstract">
+Web content has shifted from simple documents to active programs, but web protocols and browsers have not evolved adequately to support them.  As a result, safety problems in web sites and web browsers now regularly make headlines, from browser exploits to ISPs that modify web pages.  In this talk, I will discuss my research into improving the security and reliability of web content and browsers.
+<p>
+For most of this talk, I will focus on one particular problem: the ability for intermediaries to modify web content in-flight.  Our recent measurement study shows that many clients now receive web pages that have been altered before reaching the browser.  The changes range from injected advertisements to popup blocking code to malware, often affecting the user's privacy and security.  Some of these changes introduce bugs and even vulnerabilities into the pages they modify.  Most sites are unwilling to switch to SSL for reasons of cost and performance, so I will show how web servers can use "web tripwires" to detect in-flight page changes with inexpensive JavaScript code.
+<p>
+After this, I will talk more broadly about my research on web browser security, focusing on the deficiencies of today's web as an application platform.  Starting from my prior work on BrowserShield, I will show how we need a safer architecture for running programs within the browser.  Like an operating system, this new architecture will need effective mechanisms to define, isolate, and enforce policies on these web programs.
+        </div>
+        Slides: 
+        [<a href="talks/stanford-talk-mar2008.pdf">pdf</a>]
+        [<a href="talks/stanford-talk-mar2008.mov">mov</a>]
+        [<a href="talks/stanford-talk-mar2008.key.zip">key</a>]
+        <ul>
+          <li class="bullet"><a 
+            href="http://www.truststc.org/seminar.htm">Berkeley TRUST Seminar</a>.  
+            May 8, 2008.
+
+          <li class="bullet"><a 
+            href="http://www.stanford.edu/class/ee380/winter-schedule-20072008.html">Stanford 
+            EE 380 Colloquium</a>.  March 12, 2008.
+            <br>[<a href="http://stanford-online.stanford.edu/courses/ee380/080312-ee380-300.asx">Windows Media video</a>]
+
+          <li class="bullet">Google Tech Talk, Mountain View, CA.  March 10, 2008.
+            <br>[<a href="http://www.youtube.com/watch?v=H9_mG_yAoTQ">YouTube video</a>]
+
+          <li class="bullet">Google Tech Talk, Kirkland, WA.  January 17, 2008.
+
+          <li class="bullet">Amazon Developer Conference, Seattle, WA.  January 16, 2008.
+
+        </ul>
+      </div>
+
+    </div>
+ </div>
+  
+  </body>
+</html>
